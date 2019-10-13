@@ -40,13 +40,13 @@ Frequency $alignr${freq_g cpu0}Ghz
 Uptime $alignr${uptime}
 
 ${font Arial:bold:size=10}${color Tan1}CPU ${color DarkSlateGray}${hr 2}
-$font${color DimGray}Temp: $alignr ${execi 60 cat /sys/class/thermal/thermal_zone0/temp | cut -c 1-2} C
-$font${color DimGray}CPU1  ${cpu cpu1}% ${cpubar cpu1}
-CPU2  ${cpu cpu2}% ${cpubar cpu2}
-CPU3  ${cpu cpu3}% ${cpubar cpu3}
-CPU4  ${cpu cpu4}% ${cpubar cpu4}
-CPU5  ${cpu cpu5}% ${cpubar cpu5}
-CPU6  ${cpu cpu6}% ${cpubar cpu6}
+$font${color DimGray}Temp: $alignr ${execi 2 cat /sys/class/thermal/thermal_zone0/temp | cut -c 1-2} C
+$font${color DimGray}CPU1 ${cpu cpu1}% ${cpubar cpu1}
+CPU2 ${cpu cpu2}% ${cpubar cpu2}
+CPU3 ${cpu cpu3}% ${cpubar cpu3}
+CPU4 ${cpu cpu4}% ${cpubar cpu4}
+CPU5 ${cpu cpu5}% ${cpubar cpu5}
+CPU6 ${cpu cpu6}% ${cpubar cpu6}
 ${cpugraph DimGray DarkSlateGray -t} $color
 ###
 ${font Arial:bold:size=10}${color Tan1}MEMORY ${color DarkSlateGray}${hr 2}

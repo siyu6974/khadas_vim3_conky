@@ -36,7 +36,7 @@ ${color DimGray}
 ${font}
 ${font Arial:bold:size=10}${color Tan1}SYSTEM ${color DarkSlateGray} ${hr 2}
 $font${color DimGray}$sysname $kernel $alignr $machine
-Frequency $alignr${freq_g cpu0}Ghz
+Frequency $alignr${execi 2 echo $((`cat /sys/devices/system/cpu/cpufreq/policy0/cpuinfo_cur_freq`/1000))}Mhz+${execi 2 echo $((`cat /sys/devices/system/cpu/cpufreq/policy2/cpuinfo_cur_freq`/1000))}Mhz
 Uptime $alignr${uptime}
 
 ${font Arial:bold:size=10}${color Tan1}CPU ${color DarkSlateGray}${hr 2}
